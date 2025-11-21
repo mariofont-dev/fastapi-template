@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: fastapi_app
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+      # Add more environment variables here as needed
+      # - DATABASE_URL=postgresql://user:pass@host:5432/db
+    volumes:
+      # Mount code for development (hot reload)
+      - .:/app
+    # Uncomment for production (no volume mount)
+    # volumes: []
+
