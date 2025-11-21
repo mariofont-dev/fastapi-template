@@ -30,7 +30,7 @@ target_metadata = SQLModel.metadata
 # my_important_option = config.get_main_option("my_important_option")
 # ... etc.
 
-DATABASE_URL = settings.sqlite_url
+DATABASE_URL = settings.database_url
 config.set_main_option("sqlalchemy.url", DATABASE_URL)
 
 
