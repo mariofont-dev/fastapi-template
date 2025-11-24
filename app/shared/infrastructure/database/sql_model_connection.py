@@ -11,5 +11,5 @@ class SQLModelConnection(DatabaseConnection):
             connect_args={"check_same_thread": False},
         )
 
-    def get_session(self):
+    def get_session(self) -> Session:
         return Session(self.engine)

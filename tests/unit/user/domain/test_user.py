@@ -1,11 +1,11 @@
 from uuid import UUID
-from app.contexts.user.domain.entities.user import User
+from app.contexts.user.domain.entities.user_entity import UserEntity
 
 
 class TestUser:
 
     def test_success(self):
-        user = User(first_name="Mario", last_name="Font", age=27)
+        user = UserEntity(first_name="Mario", last_name="Font", age=27)
 
         assert user.id
         assert isinstance(user.id, UUID)

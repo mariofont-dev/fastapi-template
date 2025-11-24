@@ -1,16 +1,14 @@
 from pydantic import Field
-from pydantic_settings import BaseSettings
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Config(BaseSettings):
+    model_config = SettingsConfigDict(env_file=".env", case_sensitive=False)
+
     sqlite_url: str = Field(
         default="sqlite:///./app.db",
         description="SQLite database URL (fallback)",
     )
-
-    class Config:
-        env_file = ".env"
-        case_sensitive = False
 
     @property
     def database_url(self) -> str:

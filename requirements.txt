@@ -4,3 +4,4 @@ sqlmodel
 alembic
 pydantic-settings
 pytest
+dependency_injector

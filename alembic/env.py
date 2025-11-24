@@ -7,7 +7,7 @@ from alembic import context
 from sqlmodel import SQLModel
 
 from app.config.settings import settings
-from app.contexts.user.infrastructure.persistence.sql.models.user import User
+from app.contexts.user.infrastructure.persistence.sql_model.models.user import User
 
 
 # this is the Alembic Config object, which provides
