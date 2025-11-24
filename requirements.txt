@@ -3,4 +3,4 @@ uvicorn[standard]
 sqlmodel
 alembic
 pydantic-settings
-
+pytest
